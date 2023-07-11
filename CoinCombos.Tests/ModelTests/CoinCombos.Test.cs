@@ -62,7 +62,7 @@ namespace CoinCombos.Tests
         }
 
         [TestMethod]
-        public void CalculateSmallestCoins_ReturnsCoinComboWithAnyCoins_Int()
+        public void CalculateSmallestCoins_ReturnsCoinComboWithAllCoins_Int()
         {
             CoinCombo newCoinCombo = new CoinCombo(67);
             CoinCombo result = CalculateCoins.CalculateSmallestCoins(newCoinCombo.Cents);
