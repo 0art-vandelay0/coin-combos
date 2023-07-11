@@ -7,12 +7,12 @@ namespace CoinCombos
     {
         static void Main()
         {
-            // Console.WriteLine("Coin Change Calculator");
+            Console.WriteLine("Coin Change Calculator");
 
-            // Console.WriteLine("Enter the amount of cents: ");
-            // int cents = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the amount of cents: ");
+            int cents = Convert.ToInt32(Console.ReadLine());
 
-            // CoinChange coinChange = CoinCalculator.CalculateSmallestCoins(cents);
+            CoinCombo coinChange = new CoinCombo(cents);
 
             // Console.WriteLine("Smallest number of coins needed:");
             // Console.WriteLine($"Quarters: {coinChange.Quarters}");
