@@ -13,6 +13,7 @@ namespace CoinCombos
             int cents = Convert.ToInt32(Console.ReadLine());
 
             CoinCombo coinChange = new CoinCombo(cents);
+            Console.WriteLine(coinChange.Cents);
 
             // Console.WriteLine("Smallest number of coins needed:");
             // Console.WriteLine($"Quarters: {coinChange.Quarters}");

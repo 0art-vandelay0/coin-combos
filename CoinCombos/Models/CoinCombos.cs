@@ -5,18 +5,16 @@ namespace CoinCombos
     public class CoinCombo
     {
         public int Cents { get; set; }
+        public int Quarters { get; set; }
+        public int Dimes { get; set; }
+        public int Nickels { get; set; }
+        public int Pennies { get; set; }
 
         public CoinCombo(int cents)
         {
             Cents = cents;
         }
     }
-    // {
-    //     public int Quarters { get; set; }
-    //     public int Dimes { get; set; }
-    //     public int Nickels { get; set; }
-    //     public int Pennies { get; set; }
-    // }
 
     // public class CalculateCoins
     // {

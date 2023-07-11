@@ -12,5 +12,12 @@ namespace CoinCombos.Tests
             CoinCombo newCoinCombo = new CoinCombo(55);
             Assert.AreEqual(typeof(CoinCombo), newCoinCombo.GetType());
         }
+
+        [TestMethod]
+        public void CoinComboConstructor_CreatesInstanceOfCoinComboWithCentsProperty_55()
+        {
+            CoinCombo newCoinCombo = new CoinCombo(55);
+            Assert.AreEqual(55, newCoinCombo.Cents);
+        }
     }
 }
