@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using CoinCombos;
+using System;
 
 namespace CoinCombos.Tests
 {
@@ -18,6 +19,14 @@ namespace CoinCombos.Tests
         {
             CoinCombo newCoinCombo = new CoinCombo(55);
             Assert.AreEqual(55, newCoinCombo.Cents);
+        }
+
+        [TestMethod]
+        public void CalculateSmallestCoins_ReturnsCoinComboWithQuarters_2()
+        {
+            CoinCombo newCoinCombo = new CoinCombo(55);
+            CoinCombo result = CalculateCoins.CalculateSmallestCoins(newCoinCombo.Cents);
+            Assert.AreEqual(2, result.Quarters);
         }
     }
 }
