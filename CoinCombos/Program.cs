@@ -15,13 +15,12 @@ namespace CoinCombos
             CoinCombo coinChange = new CoinCombo(cents);
             Console.WriteLine(coinChange.Cents);
 
-            // Console.WriteLine("Smallest number of coins needed:");
-            // Console.WriteLine($"Quarters: {coinChange.Quarters}");
-            // Console.WriteLine($"Dimes: {coinChange.Dimes}");
-            // Console.WriteLine($"Nickels: {coinChange.Nickels}");
-            // Console.WriteLine($"Pennies: {coinChange.Pennies}");
+            CoinCombo result = CalculateCoins.CalculateSmallestCoins(coinChange.Cents);
 
-            // Console.ReadLine();
+            Console.WriteLine("Quarters: " + result.Quarters);
+            Console.WriteLine("Dimes: " + result.Dimes);
+            Console.WriteLine("Nickels: " + result.Nickels);
+            Console.WriteLine("Pennies: " + result.Pennies);
         }
     }
 }

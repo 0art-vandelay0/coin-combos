@@ -15,18 +15,34 @@ namespace CoinCombos.Tests
         }
 
         [TestMethod]
-        public void CoinComboConstructor_CreatesInstanceOfCoinComboWithCentsProperty_55()
+        public void CoinComboConstructor_CreatesInstanceOfCoinComboWithCentsProperty_Int55()
         {
             CoinCombo newCoinCombo = new CoinCombo(55);
             Assert.AreEqual(55, newCoinCombo.Cents);
         }
 
         [TestMethod]
-        public void CalculateSmallestCoins_ReturnsCoinComboWithQuarters_2()
+        public void CalculateSmallestCoins_ReturnsCoinComboWithQuarters_Int2()
         {
             CoinCombo newCoinCombo = new CoinCombo(55);
             CoinCombo result = CalculateCoins.CalculateSmallestCoins(newCoinCombo.Cents);
             Assert.AreEqual(2, result.Quarters);
+        }
+
+        [TestMethod]
+        public void CalculateSmallestCoins_ReturnsCoinComboWithDimes_Int0()
+        {
+            CoinCombo newCoinCombo = new CoinCombo(56);
+            CoinCombo result = CalculateCoins.CalculateSmallestCoins(newCoinCombo.Cents);
+            Assert.AreEqual(0, result.Dimes);
+        }
+
+        [TestMethod]
+        public void CalculateSmallestCoins_ReturnsCoinComboWithPennies_Int1()
+        {
+            CoinCombo newCoinCombo = new CoinCombo(56);
+            CoinCombo result = CalculateCoins.CalculateSmallestCoins(newCoinCombo.Cents);
+            Assert.AreEqual(1, result.Pennies);
         }
     }
 }
