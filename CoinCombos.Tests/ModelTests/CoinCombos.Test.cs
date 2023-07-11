@@ -44,5 +44,32 @@ namespace CoinCombos.Tests
             CoinCombo result = CalculateCoins.CalculateSmallestCoins(newCoinCombo.Cents);
             Assert.AreEqual(1, result.Pennies);
         }
+
+        [TestMethod]
+        public void CalculateSmallestCoins_ReturnsCoinComboWithQuarters_Int3()
+        {
+            CoinCombo newCoinCombo = new CoinCombo(77);
+            CoinCombo result = CalculateCoins.CalculateSmallestCoins(newCoinCombo.Cents);
+            Assert.AreEqual(3, result.Quarters);
+        }
+
+        [TestMethod]
+        public void CalculateSmallestCoins_ReturnsCoinComboWithNickels_Int1()
+        {
+            CoinCombo newCoinCombo = new CoinCombo(59);
+            CoinCombo result = CalculateCoins.CalculateSmallestCoins(newCoinCombo.Cents);
+            Assert.AreEqual(1, result.Nickels);
+        }
+
+        [TestMethod]
+        public void CalculateSmallestCoins_ReturnsCoinComboWithAnyCoins_Int()
+        {
+            CoinCombo newCoinCombo = new CoinCombo(67);
+            CoinCombo result = CalculateCoins.CalculateSmallestCoins(newCoinCombo.Cents);
+            Assert.AreEqual(2, result.Quarters);
+            Assert.AreEqual(1, result.Dimes);
+            Assert.AreEqual(1, result.Nickels);
+            Assert.AreEqual(2, result.Pennies);
+        }
     }
 }
